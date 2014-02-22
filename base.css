@@ -1,0 +1,37 @@
+/*
+@说明：reset.css 可根据个人喜好，更换你的 reset.css 全局文件
+*/
+
+html,body{min-height:101%}
+body,input,button,select,textarea,th,td{font-size:12px;line-height:1.5;font-family:tahoma,arial,sans-serif;color:#666}
+
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,button,textarea,p,blockquote,th,td{margin:0;padding:0}
+
+dl,ul{list-style:none}
+li{vertical-align:middle;}
+img{border:0px}
+h1,h2,h3,h4,h5,h6{font-size:14px;font-weight:normal}
+em,i,u{font-style:normal;text-decoration:none}
+
+:focus{outline:0}
+q:before,q:after{content:''}
+
+a:link,a:visited{color:#5678a0;text-decoration:none}
+a:hover{color:#f14382}
+
+
+.clr{zoom:1}
+.clr:after{content:"\0020";display:block;height:0;overflow:hidden;clear:both;}
+
+
+.abtn:link,.abtn:visited{float:left;+display:inline;margin-right:8px;padding-left:2px;height:30px;overflow:hidden;background-image:url(http://cdn.duitang.com/uploads/people/201311/14/20131114184029_LU8KN.png);background-repeat:no-repeat;background-position:0 -380px;text-decoration:none !important;border-radius:2px;}
+.abtn:hover{background-position:0 -414px;}
+
+.abtn button{+overflow:visible;float:left;+display:inline;width:auto;height:100%;border:0 none;background:0 none;margin:0;padding:0;cursor:pointer;+width:60px;}
+.abtn button::-moz-focus-inner{padding:0;border:0 none;}
+.abtn u{display:inline-block;padding:0 16px 0 14px;height:100%;letter-spacing:2px;font-size:14px;line-height:31px;font-family:'\5B8B\4F53';color:#f7f7f7;background-image:url(http://cdn.duitang.com/uploads/people/201311/14/20131114184029_LU8KN.png);background-repeat:no-repeat;background-position:right -52px;cursor:pointer;}
+.abtn u{+display:inline}
+.abtn:hover u{background-position:right -86px;}
+
+
+/* __MSG_@@extension_id__ */

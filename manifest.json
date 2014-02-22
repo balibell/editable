@@ -1,0 +1,38 @@
+{
+	"name": "广告必杀",
+	"version": "2013.10.20.1",
+	"description": "Aliway 签名图片隐藏，右键功能开启",
+	"manifest_version": 2,
+	"background": {
+		"page": "background.html"
+	},
+	"browser_action": {
+		"default_icon": "img/icon19.png",
+		"default_popup": "popup.html",
+		"default_title": "广告必杀"
+	},
+	"options_page": "options.html",
+	"permissions": [ "cookies", "http://wiki.dev.duitang.com/pages/*"  ],
+	"content_scripts": [ 
+		{
+			"matches": [
+				"http://wiki.dev.duitang.com/pages/*"
+			],
+			"css": ["base.css", "content.css", "tableedit.css"],
+			"run_at": "document_start"
+		},
+		{
+			"matches": [
+				"http://wiki.dev.duitang.com/pages/*"
+			],
+			"js": [ "jquery.js", "sortable.js", "content.js", "tableedit.js"],
+			"run_at": "document_end"
+		}
+	],
+	"icons": {
+		"128": "img/icon128.png",
+		"16": "img/icon16.png",
+		"19": "img/icon19.png",
+		"48": "img/icon48.png"
+	}
+}

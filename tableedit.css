@@ -1,0 +1,64 @@
+/*
+@说明： 专门针对 confluence table 做的可视化 editor
+*/
+
+
+
+
+
+
+
+/* tableedit 按钮 */
+#cx-tablecontedit{position:absolute;z-index:9999;width:24px;height:24px;margin:-16px 0 0 -6px;cursor:pointer;background:url(http://cdn.duitang.com/uploads/people/201311/14/20131114160211_UxtEs.png) no-repeat;background-size:24px 24px;}
+#cx-tablecontedit:hover{background-color:#64aedc;}
+
+
+#pm-holder-wrap{position:absolute;z-index:999999;top:0;left:0;right:0;height:10000px;background-color:#fff;}
+#pm-holder-close{position:fixed;top:0;right:0;z-index:200;width:40px;height:40px;border:1px solid #f00;text-align:center;}
+
+
+
+
+.pm-item-list .pm-nmcoup,
+.pm-item-list .pm-buy
+{display:none;}
+
+.pm-wrap{width:1110px;margin:0 auto;}
+.pm-item-list{width:1121px;font-size:12px;}
+
+.pm-item-list .pm-woo{float:left;+display:inline;height:443px;margin-right:10px;}
+.pm-item-list .pm-mbpho img{width:270px;height:270px;}
+.pm-item-list .pm-woo{overflow:hidden;width:270px;}
+.pm-item-list .pm-inner{position:relative;overflow:hidden;width:270px;}
+.pm-item-list .pm-desc{margin:68px 0 0;}
+
+/* 折扣价格 */
+.pm-item-list .pm-item-detail{position:absolute;top:270px;width:100%;height:40px;margin:14px 0 0;line-height:1.4;text-align:center;}
+.pm-item-list .pm-item-detail i{display:block;color:#bbb;}
+
+.pm-item-list .pm-price:link,
+.pm-item-list .pm-price:visited{font-size:20px;color:#3c3c3c;}
+.pm-item-list .pm-price:hover{text-decoration:underline;color:#3c3c3c;}
+
+/* 商品描述 */
+.pm-item-list .pm-g{height:60px;line-height:21px;padding:0 12px;text-align:center;color:#666;}
+.pm-item-list .pm-sout{text-align:center;color:#666;}
+
+
+/* 编辑后提交按钮，类目的 title样式 */
+div.sstitle{padding:80px 0 0;}
+.pm-sortsub{position:fixed;left:0;bottom:40px;}
+
+
+
+/* item 可视化编辑 */
+.ipt{width:180px;height:25px;line-height:21px;padding:3px 2px 0 4px;border-width:1px;border-style:solid;border-color:#D4D4D4;font-size:12px;}
+/* add.zhubin */
+input.ipt:focus{background-color:#FAFFBD}
+
+#pm-vsitemedit{position:absolute;z-index:9999990;width:24px;height:24px;cursor:pointer;background:url(http://cdn.duitang.com/uploads/people/201311/14/20131114160211_UxtEs.png) no-repeat;background-size:24px 24px;}
+
+#pm-wooedit{position:fixed;z-index:9999991;top:100px;left:50%;width:500px;height:280px;padding:20px;margin-left:-270px;border:2px solid #f7f7f7;box-shadow:2px 2px 4px rgba(0,0,0,.3);background-color:#fff;}
+#pm-wooedit label{clear:both;float:left;width:80px;margin:12px 0 0;}
+#pm-wooedit input{float:left;width:340px;margin:12px 0 0}
+#pm-woo-sub{clear:both;margin:12px 0 0;}

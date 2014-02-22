@@ -1,0 +1,130 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>Duitang settings</title>
+<link rel="stylesheet"  href="base.css"/>
+<style>
+.option-head{height:232px;background:#f7f7f7 url(img/option.png) repeat-x;}
+.option-head h1{float:left;height:82px;margin:40px 0 0 80px;padding:30px 0 0 160px;letter-spacing:1px;font-size:36px;font-family:'\5FAE\8F6F\96C5\9ED1';text-shadow:1px 1px rgba(246,201,217,.3);font-weight:normal;color:#f24b87;background:transparent url(img/option.png) 0 -300px no-repeat;}
+.option-body{margin:20px 0 0 80px;}
+
+#option-autolg{display:none;line-height:23px;padding:12px 0 0;}
+#autologinuser .red{font-weight:bold;}
+
+/* title words */
+#checkwords,#setwords,#setcropwords{width:600px;height:20px;padding:8px 0 6px;border-bottom:1px solid #f0f0f0;}
+#checkresult{display:none;}
+.checkpass{color:#8bb541;font-weight:bold;}
+.checkfalse{color:#f14382;}
+.checkpass .formtip,.checkfalse .formtip{display:none;}
+.checkpass #checkresult,.checkfalse #checkresult,.checkpass #setresult,.checkfalse #setresult{display:block;}
+
+
+.ctr-sw{height:44px;margin:-44px 0 0 222px;list-style:none;-moz-border-radius:4px 4px 0 0;-webkit-border-radius:4px 4px 0 0;border-radius:4px 4px 0 0;}
+.ctr-sw li{float:left;height:100%;overflow:hidden;margin:0 8px 0 0;vertical-align:middle;}
+.ctr-sw a{float:left;width:144px;height:100%;overflow:hidden;line-height:49px;letter-spacing:1px;text-align:center;font-family:'\5FAE\8F6F\96C5\9ED1';font-size:18px;font-weight:normal;}
+.ctr-sw a:link,.ctr-sw a:visited{color:#5678a0;text-shadow:1px 0 #b5d0de;text-decoration:none;}
+.ctr-sw a:hover{color:#f24b87;text-shadow:1px 0 #f6c9d9;text-decoration:none;}
+.ctr-sw a.cur:link,.ctr-sw a.cur:visited{background:#fff url(img/option.png) 0 -240px no-repeat;color:#666;text-shadow:1px 0px #b8b8b8,1px 1px #ebebeb;text-decoration:none;}
+.ctr-sw a.cur:hover{color:#666;text-shadow:1px 0px #b8b8b8,1px 1px #ebebeb;text-decoration:none;cursor:default}
+.dymswitch-b{display:none;}
+
+.ctr-sw li.option-how{float:right;height:100%;overflow:hidden;margin:0 8px 0 0;vertical-align:middle;}
+.ctr-sw li.option-how a:link,.ctr-sw li.option-how a:visited{float:right;width:auto;height:auto;line-height:1.2;margin:20px 0 0;letter-spacing:0px;text-shadow:none;font-size:12px;}
+.ctr-sw li.option-how a:hover{text-shadow:none;}
+
+
+/* base element */
+.ipt{width:180px;height:22px;padding:2px 2px 0 4px;border-width:1px;border-style:solid;border-color:#bababa;font-size:12px;}
+/* add.zhubin */
+input.ipt:focus{background-color:#FAFFBD}
+/* red text */
+.red{color:#f14382;}
+
+/* abtn style */
+.abtn:link,.abtn:visited{float:left;+display:inline;height:26px;line-height:26px;margin:0 8px 0 0;padding:0 10px 0 13px;overflow:hidden;letter-spacing:2px;background-color:#8cb6da;background-image:url(http://cdn.duitang.com/uploads/people/201201/12/20120112122201_JuAsE.png);background-repeat:no-repeat;background-position:-4px -360px;font-family:宋体;font-size:14px;color:#f7f7f7;-moz-border-radius:3px;-webkit-border-radius:3px;border-radius:3px;}
+.abtn:hover{background-position:-4px -390px;color:#f7f7f7;}
+.abtn button{float:left;width:50px;padding:0;height:26px;border:0 none;margin:0;background:0 none;cursor:pointer;line-height:20px;}
+.abtn button u{font-size:14px;line-height:20px;font-family:宋体;color:#f7f7f7;}
+@-moz-document url-prefix(){.abtn button u{line-height:14px;}.abtn button{margin-top:-1px}}
+.abtn:link,.abtn:visited{text-decoration:none;}
+.abtn:hover{text-decoration:none;}
+
+/* 按钮不可点击 */
+.duitang-collect-abtn-no:link,.duitang-collect-abtn-no:visited{background-color:#f1f1f1;background-position:-4px -330px;color:#bbb;}
+.duitang-collect-abtn-no:hover{color:#bbb;}
+.duitang-collect-abtn-no button u{color:#bbb !important;}
+.duitang-collect-abtn-no,.duitang-collect-abtn-no button{cursor:default;}
+
+
+/* tableform style */
+.tableform{margin:16px 0 0;}
+.tableform td,.tableform th{line-height:29px;padding:4px 8px 4px 0;vertical-align:top;}
+.tableform .redstar{color:#f24b87;}
+.tableform .subtd{padding:16px 4px 4px 0;}
+.tableform .abtn{margin:-3px 8px 0 0;}
+.tableform .reply-sub{padding-top:3px}
+.tableform input{vertical-align:middle;}
+.tableform input.ipt{width:180px;height:22px;padding:2px 2px 0 4px;border-width:1px;border-style:solid;border-color:#ccc #bbb #aaa;font-size:12px;}
+.tableform textarea{width:430px;height:200px;line-height:21px;padding:2px 2px 0 4px;border-width:1px;border-style:solid;border-color:#ccc #bbb #aaa;font-size:12px;}
+
+#form-checklogin .tableform{margin:0;}
+
+
+</style>
+</head>
+<body>
+
+<div class="option-head">
+	<h1 id="option-head-wds" ></h1>
+</div>
+
+<ul class="ctr-sw">
+<li><a class="dymswitch-a" href="#autologin"><span id="option-sw-op1"></span></a></li>
+<li><a class="dymswitch-a" href="#basic"><span id="option-sw-op2"></span></a></li>
+<li><a class="dymswitch-a" href="#crop"><span id="option-sw-op3"></span></a></li>
+<li><a href="http://www.duitang.com/leave/message/"><span id="option-sw-feedback"></span></a></li>
+<li class="option-how"><a href="http://www.duitang.com/about/chrome/" target="_blank" ><span id="option-sw-how"></span></a></li>
+</ul>
+
+<div class="option-body">
+	<div class="dymswitch-b">
+		<div id="checkwords"><span id="automention" class="formtip"><span id="option-swc1"></span><a id="option-goreg" target="_blank" href="http://www.duitang.com/reg/"></a></span><span id="checkresult"></span></div>
+
+		<div id="option-autolg">
+			<span id="option-auto-sucw"></span> <br />
+			<span id="autologinuser"></span> <br />
+			<a id="setnoauto" href="javascript:;"></a>
+		</div>
+		<form id="form-checklogin"><table cellspacing="0" cellpadding="0" class="tableform"><tbody><tr><td>&nbsp;</td><td id="option-upp-0"></td></tr>
+		<tr><td align="right" id="option-auto-user" ></td><td><input type="text" value="" id="login_name" class="ipt" id="p-username" /></td></tr><tr><td id="option-auto-pass" align="right"></td><td><input type="password" value="" id="pswd" class="ipt" id="p-password" /></td></tr><tr><td>&nbsp;</td><td class="subtd clr"><a id="option-auto-subtn" class="abtn abtn-s l" href="javascript:;"><button type="submit"><u id="option-auto-sub" ></u></button></a></td></tr></tbody></table>
+		</form>
+	</div>
+	<div class="dymswitch-b">
+		<div id="setwords"><span id="option-swc2" class="formtip"></span><span id="setresult"></span></div>
+		<form id="form-basicset">
+		<table cellspacing="0" cellpadding="0" class="tableform"><tbody><tr><td align="right">　　　　　　</td><td><span id="option-basic-psize"></span> <br />&nbsp;&nbsp;&nbsp;&nbsp;<input id="picsize80" type="radio" name="picsize" value="80" checked/> <label for="picsize80" id="option-basic-gt80" ></label> <br />&nbsp;&nbsp;&nbsp;&nbsp;<input id="picsize120" type="radio" name="picsize" value="120" /> <label for="picsize120" id="option-basic-gt120"></label> <br />&nbsp;&nbsp;&nbsp;&nbsp;<input id="picsize200" type="radio" name="picsize" value="200" /> <label for="picsize200" id="option-basic-gt200"></label> </td></tr><tr><td height=0></td></tr><tr><td align="right">&nbsp;</td><td><input id="remembertags" type="checkbox" name="lasttags" checked/> <label for="remembertags" id="option-basic-rem" ></label></td></tr><tr style="display:none" ><td align="right">&nbsp;</td><td><input id="showhowtip" type="checkbox" name="showhow" checked/> <label for="showhowtip" id="option-basic-dragtip"></label></td></tr><tr><td align="right">&nbsp;</td><td><input id="hidedirpic" type="checkbox" name="hidedirpic" /> <label for="hidedirpic" id="option-basic-dirpic"></label></td></tr><tr><td>&nbsp;</td><td id="option-upp-0-b"></td></tr><tr><td>&nbsp;</td><td class="subtd clr"><a class="abtn abtn-s l" href="javascript:;"><button type="submit"><u id="option-basic-sub"></u></button></a></td></tr></tbody></table>
+		</form>
+	</div>
+	<div class="dymswitch-b">
+		<div id="setcropwords"><span id="option-swc3" class="formtip"></span><span id="cropsetresult"></span></div>
+		<form id="form-basicset">
+		<table cellspacing="0" cellpadding="0" class="tableform"><tbody><tr><td align="right">　　　　　　</td><td><input id="settingShortcut" type="checkbox" checked vertical-align="middle"/> <label for="settingShortcut" id="option-crop-enable" ></label></td></tr>
+		<tr><td align="right">&nbsp;</td><td  id="hot-key-setting">
+			<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span id="showpics-capture-text"></span>
+			<span>&nbsp;&nbsp;&nbsp;&nbsp;Ctrl+Alt+<select id="showpics-capture-hot-key"></select></span>
+
+			<br />
+
+			<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span id="area-capture-text"></span>
+			<span>&nbsp;&nbsp;&nbsp;&nbsp;Ctrl+Alt+<select id="area-capture-hot-key"></select></span>
+		</td></tr>
+		<tr><td>&nbsp;</td><td class="subtd clr"><a class="abtn abtn-s l" href="javascript:;"><button id="option-savebtn" type="button"><u id="option-crop-sub"></u></button></a></td></tr></tbody></table>
+		</form>
+	</div>
+</div>
+
+
+</body>
+</html>
